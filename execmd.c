@@ -1,9 +1,9 @@
 #include "main.h"
 
 /*
- * execmd - executes commmands
+ * execmd - executes command found by location
  * @argv: passed command argument
- * Return: NULL
+ * Return: integer value
  */
 
 int execmd(char **argv)
@@ -18,7 +18,7 @@ int execmd(char **argv)
 		perror("Error: ");
 		return (1);
 	}
-	else if(pid == 0)
+	else if (pid == 0)
 	{
 		cmd = argv[0];
 
@@ -29,14 +29,14 @@ int execmd(char **argv)
 			perror("Error:");
 			return (1);
 		}
-		else{
-			if(waitpid(pid, &status, 0) == -1)
+		else
+		{
+			if (waitpid(pid, &status, 0) == -1)
 			{
 				perror("Error: ");
 				return (1);
 			}
 		}
-		
 	}
 	return (0);
 }
