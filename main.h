@@ -10,7 +10,7 @@
 
 
 //#define buffer 1024
-
+static char *currentDirectory;
 
 int execmd(char **argc);
 char *location(char *command);
