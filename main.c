@@ -12,6 +12,7 @@ int main(int ac, char **argv)
     const char *delim = " \n";//tokenizing delimiter
     int tkn_num = 0;
     int i;
+    char *comment_ptr;
 
     while (1)
     {
@@ -24,7 +25,7 @@ int main(int ac, char **argv)
             return (-1);
         }
 
-        cmd_cpy = strdup(cmdptr);
+	cmd_cpy = strdup(cmdptr);
         if (cmd_cpy == NULL) {
             perror("Error:");
             continue;
