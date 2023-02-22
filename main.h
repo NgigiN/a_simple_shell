@@ -8,10 +8,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define delim " \n"
 
-//#define buffer 1024
-
-
+char currentDirectory[1024];
 int execmd(char **argc);
 char *location(char *command);
 
